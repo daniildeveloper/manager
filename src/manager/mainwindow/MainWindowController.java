@@ -21,7 +21,6 @@ public class MainWindowController implements Initializable {
      * @param url
      * @param rb
      */
-    @Override
     public void initialize(URL url, ResourceBundle rb) {
 //        tabMail.setGraphic(new Label("Mail"));
     }
