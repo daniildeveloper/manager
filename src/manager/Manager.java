@@ -3,6 +3,8 @@
 package manager;
 
 import java.io.IOException;
+import java.util.Locale;
+import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javafx.application.Application;
@@ -17,6 +19,8 @@ import javafx.stage.Stage;
  */
 public class Manager extends Application {
 
+    private ResourceBundle resourceBundle;
+
     @Override
     public void start(Stage primaryStage) {
         try {
@@ -24,11 +28,17 @@ public class Manager extends Application {
 
             Scene scene = new Scene(root, 1280, 700);
 
-            primaryStage.setTitle("Hello World!");
+//            resourceBundle = ResourceBundle.getBundle("bundles.MainBundle", new Locale("en", "EN"));
+
+//            String title = resourceBundle.getString("appTitle");
+
+            primaryStage.setTitle("Daniildeveloper Manager");
             primaryStage.setScene(scene);
             primaryStage.show();
         } catch (IOException ex) {
             Logger.getLogger(Manager.class.getName()).log(Level.SEVERE, null, ex);
+            System.out.println(ex.getCause());
+
         }
     }
 
